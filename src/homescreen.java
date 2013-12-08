@@ -72,9 +72,13 @@ public class homescreen extends javax.swing.JPanel {
         buttonGroup3 = new javax.swing.ButtonGroup();
         buttonGroup4 = new javax.swing.ButtonGroup();
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        Transcript = new javax.swing.JPanel();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        Enroll = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jButton7 = new javax.swing.JButton();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        jList4 = new javax.swing.JList();
+        jButton2 = new javax.swing.JButton();
         Planner = new javax.swing.JPanel();
         jComboBox3 = new javax.swing.JComboBox();
         jLabel3 = new javax.swing.JLabel();
@@ -89,13 +93,9 @@ public class homescreen extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         jScrollPane4 = new javax.swing.JScrollPane();
         jCourseDesc = new javax.swing.JTextArea();
-        Enroll = new javax.swing.JPanel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jButton7 = new javax.swing.JButton();
-        jScrollPane8 = new javax.swing.JScrollPane();
-        jList4 = new javax.swing.JList();
-        jButton2 = new javax.swing.JButton();
+        Transcript = new javax.swing.JPanel();
+        jButton3 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
         FinancialAid = new javax.swing.JPanel();
         jComboBox1 = new javax.swing.JComboBox();
         jScrollPane5 = new javax.swing.JScrollPane();
@@ -120,45 +120,77 @@ public class homescreen extends javax.swing.JPanel {
 
         jTabbedPane1.setForeground(new java.awt.Color(0, 0, 200));
 
-        Transcript.setForeground(new java.awt.Color(0, 0, 200));
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {"8 AM", null, null, null, null, null},
+                {"9", null, null, null, null, null},
+                {"10", "CSC 201", null, "CSC 201", null, "CSC 201"},
+                {"11", null, "ANTH 101", null, "ANTH 101", null},
+                {"12 PM", null, "CSC 101", null, "CSC 101", null},
+                {"1", "ANTH 201", null, "ANTH 201", null, "ANTH 201"},
+                {"2", null, "ANTH 301", null, "ANTH 301", null},
+                {"3", "CSC 301", null, "CSC 301", null, "CSC 301"},
+                {"4", null, null, null, null, null},
+                {"5", null, null, null, null, null},
+                {"6", null, null, null, null, null},
+                {null, null, null, null, null, null}
+            },
+            new String [] {
+                "Time", "Monday", "Tuesday", "Wednesday", "Thusday", "Friday"
+            }
+        ));
+        jScrollPane3.setViewportView(jTable1);
 
-        jButton3.setText("View Unnofficial ");
-        jButton3.setToolTipText("");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jButton7.setText("Update");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jButton7ActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Order Official");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        jList4.setModel(listModel2);
+        jList4.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jScrollPane8.setViewportView(jList4);
+
+        jButton2.setText("Remove");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                jButton2ActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout TranscriptLayout = new javax.swing.GroupLayout(Transcript);
-        Transcript.setLayout(TranscriptLayout);
-        TranscriptLayout.setHorizontalGroup(
-            TranscriptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(TranscriptLayout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(jButton3)
-                .addGap(56, 56, 56)
-                .addComponent(jButton4)
-                .addContainerGap(180, Short.MAX_VALUE))
+        javax.swing.GroupLayout EnrollLayout = new javax.swing.GroupLayout(Enroll);
+        Enroll.setLayout(EnrollLayout);
+        EnrollLayout.setHorizontalGroup(
+            EnrollLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(EnrollLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(EnrollLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(EnrollLayout.createSequentialGroup()
+                        .addGap(0, 16, Short.MAX_VALUE)
+                        .addGroup(EnrollLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton2)
+                            .addComponent(jButton7)))
+                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                .addContainerGap())
         );
-        TranscriptLayout.setVerticalGroup(
-            TranscriptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(TranscriptLayout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addGroup(TranscriptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
-                .addContainerGap(352, Short.MAX_VALUE))
+        EnrollLayout.setVerticalGroup(
+            EnrollLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(EnrollLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(EnrollLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton2)
+                .addGap(58, 58, 58)
+                .addComponent(jButton7)
+                .addGap(70, 70, 70))
         );
 
-        jTabbedPane1.addTab("Transcript", Transcript);
+        jTabbedPane1.addTab("Enroll", Enroll);
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select Deparment", "Anthropology", "Computer Science" }));
         jComboBox3.addItemListener(new java.awt.event.ItemListener() {
@@ -271,77 +303,45 @@ public class homescreen extends javax.swing.JPanel {
 
         jTabbedPane1.addTab("Planner", Planner);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"8 AM", null, null, null, null, null},
-                {"9", null, null, null, null, null},
-                {"10", "CSC 201", null, "CSC 201", null, "CSC 201"},
-                {"11", null, "ANTH 101", null, "ANTH 101", null},
-                {"12 PM", null, "CSC 101", null, "CSC 101", null},
-                {"1", "ANTH 201", null, "ANTH 201", null, "ANTH 201"},
-                {"2", null, "ANTH 301", null, "ANTH 301", null},
-                {"3", "CSC 301", null, "CSC 301", null, "CSC 301"},
-                {"4", null, null, null, null, null},
-                {"5", null, null, null, null, null},
-                {"6", null, null, null, null, null},
-                {null, null, null, null, null, null}
-            },
-            new String [] {
-                "Time", "Monday", "Tuesday", "Wednesday", "Thusday", "Friday"
-            }
-        ));
-        jScrollPane3.setViewportView(jTable1);
+        Transcript.setForeground(new java.awt.Color(0, 0, 200));
 
-        jButton7.setText("Update");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        jButton3.setText("View Unnofficial ");
+        jButton3.setToolTipText("");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                jButton3ActionPerformed(evt);
             }
         });
 
-        jList4.setModel(listModel2);
-        jList4.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
-        jScrollPane8.setViewportView(jList4);
-
-        jButton2.setText("Remove");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jButton4.setText("Order Official");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jButton4ActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout EnrollLayout = new javax.swing.GroupLayout(Enroll);
-        Enroll.setLayout(EnrollLayout);
-        EnrollLayout.setHorizontalGroup(
-            EnrollLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(EnrollLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 406, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(EnrollLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(EnrollLayout.createSequentialGroup()
-                        .addGap(0, 16, Short.MAX_VALUE)
-                        .addGroup(EnrollLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton2)
-                            .addComponent(jButton7)))
-                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
-                .addContainerGap())
+        javax.swing.GroupLayout TranscriptLayout = new javax.swing.GroupLayout(Transcript);
+        Transcript.setLayout(TranscriptLayout);
+        TranscriptLayout.setHorizontalGroup(
+            TranscriptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TranscriptLayout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(jButton3)
+                .addGap(56, 56, 56)
+                .addComponent(jButton4)
+                .addContainerGap(180, Short.MAX_VALUE))
         );
-        EnrollLayout.setVerticalGroup(
-            EnrollLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(EnrollLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(EnrollLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addGap(58, 58, 58)
-                .addComponent(jButton7)
-                .addGap(70, 70, 70))
+        TranscriptLayout.setVerticalGroup(
+            TranscriptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(TranscriptLayout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addGroup(TranscriptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton3)
+                    .addComponent(jButton4))
+                .addContainerGap(352, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Enroll", Enroll);
+        jTabbedPane1.addTab("Transcript", Transcript);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Select Aid Year", "2013-2014", "2014-2015" }));
         jComboBox1.addItemListener(new java.awt.event.ItemListener() {

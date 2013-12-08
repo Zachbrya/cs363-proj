@@ -819,6 +819,7 @@ public class Transcripts extends javax.swing.JPanel {
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // send back to home screen and also order transcript
         waitfunction(4,500);
+         JOptionPane.showMessageDialog(project, "Your Order has been placed.", "Official Transcript order", WIDTH);
         cancel();
         project.generateGui("home");
     }//GEN-LAST:event_jButton6ActionPerformed

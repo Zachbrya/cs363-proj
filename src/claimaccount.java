@@ -61,8 +61,18 @@ public class claimaccount extends javax.swing.JPanel {
         jLabel5.setText("Claim Account");
 
         jPasswordField1.setText("jPasswordField1");
+        jPasswordField1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jPasswordField1FocusGained(evt);
+            }
+        });
 
         jPasswordField2.setText("jPasswordField2");
+        jPasswordField2.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jPasswordField2FocusGained(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -118,12 +128,20 @@ public class claimaccount extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
        if(checkdata()){
-           JOptionPane.showMessageDialog(project, "An email has been sent to your school account.\nFollow the link to finish the proccess.", "Cliam Account",WIDTH);
+           JOptionPane.showMessageDialog(project, "An email has been sent to your school account.\nFollow the link to finish the proccess.", "Claim Account",WIDTH);
            project.generateGui("logon");
            project.main.txtUser1.setText("");
            project.main.pfPassword1.setText("jPasswordField1");
        }
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jPasswordField1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jPasswordField1FocusGained
+        jPasswordField1.setText("");
+    }//GEN-LAST:event_jPasswordField1FocusGained
+
+    private void jPasswordField2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jPasswordField2FocusGained
+        jPasswordField2.setText("");
+    }//GEN-LAST:event_jPasswordField2FocusGained
 public boolean checkdata()
     {
         boolean temp = false;

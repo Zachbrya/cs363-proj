@@ -105,7 +105,7 @@ public class Project extends javax.swing.JFrame {
         //home tabbed pane
         home = new homescreen( this );
         homeTab = home.jTabbedPane1;
-        homeTab.setSelectedIndex(-1);
+        homeTab.setSelectedIndex(0);
         card.add("home", homeTab);
 
         //manage tabbed pane
@@ -378,7 +378,7 @@ public class Project extends javax.swing.JFrame {
         jButton4.setVisible(false);
         jButton1.setEnabled(true);
         jPanel1.setVisible(false);
-        homeTab.setSelectedIndex(-1);
+        homeTab.setSelectedIndex(0);
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
